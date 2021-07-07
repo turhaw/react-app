@@ -7,14 +7,15 @@ const tranlate = {
   4: "four"
 }
 
-function print(a){
+function barer(a){
   for (let key in tranlate){
-    if(key == a){
+    if (key == a) {
       console.log(tranlate[key])
     }
   }
 }
 
+barer(1)
 // function translate (i){
 //   switch (i) {
 //     case 1: console.log("one")
@@ -41,7 +42,6 @@ for(let i=0 ; i< 10; i++){
   console.log("xuy")
 }
 
-print(2)
 
 // kuku(8);
   let i = "kku";
