@@ -7,25 +7,13 @@ const tranlate = {
   4: "four"
 }
 
-function barer(a){
-  for (let key in tranlate){
-    if (key == a) {
-      console.log(tranlate[key])
+function print(a){
+  for (let key in data){
+    if(key == a){
+      return data[key]
     }
   }
 }
-
-barer(1)
-// function translate (i){
-//   switch (i) {
-//     case 1: console.log("one")
-//       break;
-//     case 2: console.log("two")
-//       break;
-//     case i%100 === 0: console.log("haryur")
-//       break;
-//   }
-// }
 
 const data = {
     1: "один",
@@ -67,10 +55,62 @@ const data = {
     1000:"тысяча",
 
 }
-function translate(a) {
 
+function viaPrint(a){
+  if(print(a)){
+    console.log(print(a))
+  }else {
+    let bj;
+    let numberLenght = a.toString().length;
+      switch (numberLenght) {
+        case 3:
+          let first ,second, bjMnac;
+          bj = Math. floor(a/100);
+          bj = bj * 100;
+          bjMnac = a % 100;
+          first = print(bj);
+          second = print(bjMnac)
+          console.log(first + second)
+          break;
+        case 2 : return (
+          console.log("erku nish")
+        )
+        default:
 
+      }
+  }
 }
+
+viaPrint(140)
+
+//print(4)
+// function translate (i){
+//   switch (i) {
+//     case 1: console.log("one")
+//       break;
+//     case 2: console.log("two")
+//       break;
+//     case i%100 === 0: console.log("haryur")
+//       break;
+//   }
+// }
+
+
+// function translate(a) {
+//     switch(a){
+//       case 1:
+//         return (console.log("kuku"))
+//         break;
+//       default: console.log("xuy3")
+//     }
+// }
+//
+// var x = 1234567;
+//
+// console.log(x.toString().length)
+
+// translate(2)
+
 
 // function translate(a){
 //   if(a)
@@ -79,11 +119,12 @@ function translate(a) {
 // }
 
 //translate(100)
+//
+// for(let i=0 ; i< 10; i++){
+//   console.log("xuy")
+// }
 
-for(let i=0 ; i< 10; i++){
-  console.log("xuy")
-}
-
+// print(2)
 
 // kuku(8);
   let i = "kku";
