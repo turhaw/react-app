@@ -7,13 +7,6 @@ const tranlate = {
   4: "four"
 }
 
-function print(a){
-  for (let key in data){
-    if(key == a){
-      return data[key]
-    }
-  }
-}
 
 const data = {
     1: "один",
@@ -56,6 +49,15 @@ const data = {
 
 }
 
+
+function print(a){
+  for (let key in data){
+    if(key == a){
+      return data[key]
+    }
+  }
+}
+
 function viaPrint(a){
   if(print(a)){
     console.log(print(a))
@@ -64,24 +66,32 @@ function viaPrint(a){
     let numberLenght = a.toString().length;
       switch (numberLenght) {
         case 3:
-          let first ,second, bjMnac;
+          let first ,second, bjMnac,bjMnacMek, bjMnaErku,third;
           bj = Math. floor(a/100);
           bj = bj * 100;
           bjMnac = a % 100;
           first = print(bj);
-          second = print(bjMnac)
-          console.log(first + second)
+          if(print(bjMnac)){
+              second = print(bjMnac);
+              console.log(first + second);
+          }else  {
+              bjMnacMek = Math.floor(bjMnac/10);
+              bjMnacMek = bjMnacMek * 10;
+              bjMnaErku = bjMnac % 10;
+              second = print(bjMnacMek);
+              third = print(bjMnaErku)
+              console.log(first + second + third);
+          }
           break;
-        case 2 : return (
+        case 2 :
           console.log("erku nish")
-        )
         default:
 
       }
   }
 }
 
-viaPrint(140)
+viaPrint(675)
 
 //print(4)
 // function translate (i){
